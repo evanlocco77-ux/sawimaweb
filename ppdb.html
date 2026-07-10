@@ -1,0 +1,140 @@
+<<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Nusa Widya Mandiri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-slate-900 text-white p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tighter">SMK <span class="text-blue-400">NUSA </span>WIDYA MANDIRI</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="index.html" class="hover:text-blue-400">Beranda</a></li>
+                <li><a href="informasi.html" class="hover:text-blue-400">Informasi</a></li>
+                <li><a href="galeri.html" class="hover:text-blue-400">Galeri</a></li>
+                <li><a href="kontak.html" class="hover:text-blue-400">Kontak</a></li>
+                <!-- Cara Tambah Sub Halaman: Copy baris li di bawah ini -->
+                <li><a href="#" class="hover:text-blue-400 font-semibold border-b-2 border-blue-400">PPDB</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <header class="bg-blue-700 py-12 text-center text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 font-tech">PENDAFTARAN SISWA BARU</h2>
+            <p class="text-xl opacity-90">Tahun Pelajaran 2026/2027</p>
+            <div class="mt-6 flex justify-center space-x-4 text-sm">
+                <span class="bg-blue-800 px-3 py-1 rounded border border-blue-400"><i class="fas fa-check-circle"></i> Jurusan TKRO</span>
+                <span class="bg-blue-800 px-3 py-1 rounded border border-blue-400"><i class="fas fa-check-circle"></i> Jurusan TKJ</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT: GOOGLE FORM EMBED -->
+    <main class="container mx-auto px-4 py-10">
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+            
+            <!-- INSTRUKSI SINGKAT -->
+            <div class="p-6 bg-slate-50 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-slate-800"><i class="fas fa-info-circle text-blue-600 mr-2"></i> Petunjuk Pendaftaran:</h3>
+                <ol class="list-decimal ml-6 mt-2 text-gray-600 text-sm space-y-1">
+                    <li>Siapkan Scan Kartu Keluarga (KK) dan Ijazah/SKL.</li>
+                    <li>Isi formulir di bawah ini dengan data yang sebenar-benarnya.</li>
+                    <li>Setelah mengirim, simpan bukti pendaftaran atau hubungi panitia via <a href="kontak.html" class="text-blue-600 font-bold">Halaman Kontak</a>.</li>
+                </ol>
+            </div>
+
+            <!-- CONTAINER UNTUK GOOGLE FORM -->
+            <div class="relative w-full" style="padding-top: 150%;"> <!-- Rasio tinggi form -->
+                <!-- Iframe Google Form -->
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScr-Yi7ZPuYuz9uKM4chmp8k1YLzO7tfrBJCUaxqTX8Dd6spw/viewform?embedded=true" 
+                    class="absolute inset-0 w-full h-full border-none"
+                    onload="document.getElementById('form-loader').style.display='none';">
+                    Memuat formulir pendaftaran…
+                </iframe>
+
+                <!-- Loading State -->
+                <div id="form-loader" class="absolute inset-0 flex flex-col items-center justify-center bg-white">
+                    <div class="loader"></div>
+                    <p class="mt-4 text-gray-500 animate-pulse">Menghubungkan ke server pendaftaran...</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- CALL TO ACTION AFTER FORM -->
+        <div class="text-center mt-10">
+            <p class="text-gray-500">Ada kendala dalam mengisi formulir?</p>
+            <a href="https://wa.me/628889911704?text=Halo%20SMK%20Nusa Widya Mandiri,%20saya%20ingin%20tanya..." target="_blank" class="text-green-600 hover:underline font-semibold"><i class="fab fa-whatsapp"></i> Chat Panitia PPDB</a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white py-10 text-center">
+        <p>&copy; 2026 SMK Nusa Widya Mandiri | Teknik Kendaraan Ringan & Teknik Komputer Jaringan.</p>
+    </footer>
+<script src="script.js"></script>
+
+<!DOCTYPE html>
+<title>Information</title>
+
+<!-- Styles -->	
+<style>
+ 
+.example1 h3 {
+ font-size: 1em;
+ color: black;
+ font-type: vendana;
+ position: absolute;
+ width: 100%;
+ height: 5%;
+ margin: 0;
+ line-height: 30px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}
+  
+</style>
+
+<!-- HTML -->	
+<div class="example1">
+<h3>Tidak ada yang lebih baik diberikan Orangtua kepada anaknya selain Pendidikan dan Akhlaq yang baik @sawima28</h3>
+</div>
+
+</body>
+</html>
